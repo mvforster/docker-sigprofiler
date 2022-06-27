@@ -3,7 +3,8 @@
 FROM debian:10.9
 
 # File Author / Maintainer
-MAINTAINER Tiandao Li <litd99@gmail.com>
+# Based on the work performed by Tiandao Li <litd99@gmail.com>
+LABEL maintainer="Matthieu Vizuete-Forster"
 
 ENV PATH /opt/conda/bin:$PATH
 
@@ -34,10 +35,6 @@ RUN echo "from SigProfilerMatrixGenerator import install as genInstall" > /opt/r
     echo "genInstall.install('GRCh38')" >> /opt/ref.py && \
     /usr/bin/python3 /opt/ref.py && \
     rm /opt/ref.py
-
-# set timezone, debian and ubuntu
-RUN ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime && \
-	echo "America/Chicago" > /etc/timezone
 
 CMD [ "/bin/bash" ]
 
