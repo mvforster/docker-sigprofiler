@@ -1,8 +1,11 @@
 # docker-sigprofiler
 
-Debian 10.9
+The container is based on the work of Tiandao Li <litd99@gmail.com>
+The pip install commands will install the latest versions of the tools available along with their dependencies
 
-Python 3.7.3
+Debian 10.9 # this will need to be updated to resolve possible vulnerabilties
+
+Python 3.7.3 # will need to be updated 
 
 SigProfilerMatrixGenerator v1.1.30 May 28, 2021
 
